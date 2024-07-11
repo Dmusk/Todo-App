@@ -8,11 +8,13 @@ import { Todos } from '../components/Todos';
 function App() {
   const [todos, setTodos] = useState([]);
 
-  fetch("http://localhost:4500/todos")
-    .then(async function (res) {
-      const json = await res.json();
-      setTodos(json.todos);
-    })
+  // Not a proper method to fetch calling infinite loop  We do use of new Hook - useEffect
+
+  // fetch("http://localhost:4500/todos")    
+  //   .then(async function (res) {             
+  //     const json = await res.json();         
+  //     setTodos(json.todos);                    
+  //   })
 
 
   return (
