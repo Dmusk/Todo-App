@@ -17,7 +17,7 @@ const mongoose = require("mongoose");
 //put the above url in .env file not in the github repo
 
 //connection to the db
-moongose.connect(
+mongoose.connect(
   "mongodb+srv://Dadu:DaduMDB%402003@cluster0.mzwtfbm.mongodb.net/todos"
 );
 
@@ -26,12 +26,12 @@ moongose.connect(
 const todoSchema = mongoose.Schema({
   title: String,
   description: String,
-  completed: boolean,
+  completed: Boolean,
 });
 
 //last thing creation of the model
 
-const todo = moongose.model("todos", todoSchema);
+const todo = mongoose.model("todos", todoSchema);
 
 module.exports = {
   todo: todo,

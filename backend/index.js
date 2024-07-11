@@ -28,11 +28,17 @@ app.post("/todo", async (req, res) => {
   });
 });
 
-app.get("/todos", (req, res) => {
-  const todos = todo.find({});
-  res.json({
-    todos,
-  });
+app.get("/todos", async (req, res) => {
+  try {
+    const todos = await todo.find({}); // Convert the cursor to an array
+    res.json({
+      todos,
+    });
+  } catch (error) {
+    res.status(500).json({
+      msg: "Failed to fetch todos",
+    });
+  }
 });
 
 app.put("/completed", async (req, res) => {
@@ -60,4 +66,6 @@ app.put("/completed", async (req, res) => {
   });
 });
 
-app.listen(4500);
+app.listen(4500, () => {
+  console.log("Server is Running on the port 4500");
+});
