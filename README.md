@@ -9,29 +9,32 @@ which does this Following Operations
 - Anyone can see their Existing todo
 - Anyone can mark todo as DONE.
 
+## SETUP :-
 
-# Backend 
+# Frontend
+
+- folder Frontend
+- npx create vite@latest
+- used React & JavaScript
+
+# Backend
 
 - folder Backend
 - npm init // for package.json files
--
 
+## Things Done in BE and FE :-
 
+# In Frontend Part :-
 
+- React Hooks { useState },
+- object destructuring
 
+# In Backend Part :-
 
-
-
-
-
-
-
-
-
-
-
-
-
+- used zod for Validation
+- mongoDB for the Database
+- mongoose for mongo connection
+- github as the place to push the code
 
 # React + Vite
 
